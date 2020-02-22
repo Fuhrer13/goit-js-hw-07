@@ -4,7 +4,7 @@
 // Для добавления стилей, используй CSS-классы valid и invalid.
 
 const input = document.querySelector('#validation-input');
-input.onblur = function() {
+input.addEventListener(`input`, function() {
   console.log(this.value.length);
   if (this.getAttribute('data-length') > this.value.length) {
     this.classList.remove('valid');
@@ -13,4 +13,4 @@ input.onblur = function() {
     this.classList.remove('invalid');
     this.classList.add('valid');
   }
-};
+});

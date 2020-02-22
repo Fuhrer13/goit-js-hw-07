@@ -4,9 +4,10 @@
 
 const input = document.getElementById('name-input');
 const span = document.getElementById('name-output');
-input.onblur = function handleInputChange(event) {
+input.addEventListener('input', handleInputChange);
+function handleInputChange(event) {
   span.textContent = event.currentTarget.value;
   if (event.currentTarget.value === '') {
     span.textContent = 'незнакомец';
   }
-};
+}
