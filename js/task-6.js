@@ -9,8 +9,8 @@ input.addEventListener('input', function() {
   if (this.value.length == 6) {
     this.classList.remove('invalid');
     this.classList.add('valid');
-  } else {
-    this.classList.remove('valid');
-    this.classList.add('invalid');
+    return;
   }
+  this.classList.remove('valid');
+  this.classList.add('invalid');
 });

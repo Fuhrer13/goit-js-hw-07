@@ -15,9 +15,7 @@
 const categories = document.querySelectorAll('.item');
 console.log(`В списке ${categories.length} категории`);
 
-Array.prototype.forEach.call(categories, element => {
-  const title = element.querySelector('h2').textContent;
-  const itemsLength = element.querySelectorAll('li').length;
-  console.log(`Категория: ${title}
-Количество элементов: ${itemsLength}`);
+categories.forEach(element => {
+  console.log(`Категория: ${element.querySelector('h2').textContent}
+Количество элементов: ${element.querySelectorAll('li').length}`);
 });

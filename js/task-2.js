@@ -20,5 +20,5 @@ const list = document.querySelector('#ingredients');
 ingredients.forEach(element => {
   let item = document.createElement('li');
   item.textContent = element;
-  list.appendChild(item);
+  return list.appendChild(item);
 });

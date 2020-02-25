@@ -11,15 +11,11 @@ const div = document.querySelector('#counter ');
 
 let counterValue = 0;
 const increment = () => {
-  counterValue += 1;
-
-  span.textContent = counterValue;
+  span.textContent = counterValue += 1;
 };
 
 const decrement = () => {
-  counterValue -= 1;
-
-  span.textContent = counterValue;
+  span.textContent = counterValue -= 1;
 };
 subBtn.addEventListener('click', increment);
 addBtn.addEventListener('click', decrement);

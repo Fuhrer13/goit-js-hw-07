@@ -31,9 +31,9 @@ const gallery = document.querySelector('#gallery');
 const markUp = createImages(images);
 gallery.insertAdjacentHTML('afterbegin', markUp);
 function createImages(images) {
-  return images.reduce((acc, image) => (acc += createMarkup(image)), ' ');
-}
-function createMarkup({ url, alt }) {
-  const itemList = `<li><img src='${url}' alt='${alt}' width=350px higth=300px></li>`;
-  return itemList;
+  return images.reduce(
+    (str, elem) =>
+      str + `<li><img src="${elem.url}" alt="${elem.alt}" width="300"></li>`,
+    '',
+  );
 }
