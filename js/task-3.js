@@ -28,8 +28,7 @@ const images = [
 ];
 
 const gallery = document.querySelector('#gallery');
-const markUp = createImages(images);
-gallery.insertAdjacentHTML('afterbegin', markUp);
+gallery.insertAdjacentHTML('afterbegin', createImages(images));
 function createImages(images) {
   return images.reduce(
     (str, elem) =>
