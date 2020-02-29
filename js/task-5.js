@@ -6,7 +6,8 @@ const input = document.getElementById('name-input');
 const span = document.getElementById('name-output');
 input.addEventListener('input', handleInputChange);
 function handleInputChange(event) {
-  return event.currentTarget.value === ''
-    ? (span.textContent = 'незнакомец')
-    : (span.textContent = event.currentTarget.value);
+  return (span.textContent =
+    event.currentTarget.value === ''
+      ? 'незнакомец'
+      : event.currentTarget.value);
 }
